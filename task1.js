@@ -15,7 +15,9 @@ switch(operation){
         break;
     case "+" :
         result = firstDigit + secondDigit;
-        break;                 
+        break;
+    default:
+        alert("Ошибка");                 
 }
 
 alert(result);
