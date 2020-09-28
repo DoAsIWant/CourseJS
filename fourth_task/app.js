@@ -1,22 +1,18 @@
 function days(firstDate, secondDate){
     let counter = 0;
-    let workingDays = 0;
-    let time = Date.parse(firstDate) - Date.parse(secondDate),
-        days = Math.floor((time/(1000 * 60*60 * 24)));
-    
-        for(let i = 0 ; i<days;i++){
-        if(i%7 === 0 && i>0){
-            counter--;
-          continue;
-          
+        while(firstDate.getTime()<secondDate.getTime()){
+            if(firstDate.getDay() !== 0 && firstDate.getDay()!== 6 ){
+                counter++;
+            }
+
+            firstDate.setDate(firstDate.getDate() + 1);
         }
-        else{
-            counter++
-        }
-    }    
+       
  
     return counter;
 }
 
-let quantity = days("2020-09-30","2020-09-16");
+let firstDate = new Date("2020-09-16");
+let secondDate = new Date("2020-09-30")
+let quantity = days(firstDate,secondDate);
 console.log(quantity);
