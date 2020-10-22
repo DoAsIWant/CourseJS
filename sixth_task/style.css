@@ -1,0 +1,25 @@
+.block{
+    margin-top:50px;
+    width:300px;
+    height:200px;
+    padding:40px;
+    background-color: indigo;
+    color:#fff;
+    font-size:26px;
+}
+
+.fast__text p{
+    width:800px;
+    font-size:18px;
+    line-height: 1.5;
+}
+
+.fast__text .start{
+    background-color: lightcoral;
+    padding:1.2rem;
+    font-size: 24px;
+    border:none;
+    color:#fff;
+    cursor:pointer;
+    margin-top:10px;
+}
