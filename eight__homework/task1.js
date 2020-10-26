@@ -14,24 +14,43 @@
 let personData = {
     firstName : "",
     lastName: "",
+    
+    get getFirstName(){
+        return this.firstName;
+    },
 
-
- }
-
-Object.defineProperty(personData, "fullName",{
- set: function(value){
+    set setFirstName(value){
      if(value.includes(" ")){
-         console.error("Ignored");
+         console.error("This string has been ignored")
      }
+
      else{
-     [this.firstName,this.lastName] = value.split("(?=[A-Z])");
+         this.firstName = value;
      }
- },
+    },
 
- get: function(){
+    get getLastName(){
+      return this.lastName;
+    },
+
+    set setLastName(value){
+
+        if(value.includes(" ")){
+            console.error("This string has been ignored")
+        }
+        else{
+        this.lastName = value;
+        }
+    },
+
+    get getFullName(){
      return `${this.firstName} ${this.lastName}`
- }
-});
+    }
 
-personData.fullName = "vanDarkholme";
-console.log(personData.fullName);
+ }
+
+
+
+personData.setFirstName = "Van"
+personData.setLastName = "Darkholme"
+console.log(personData.getFullName);
