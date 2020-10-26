@@ -1,8 +1,8 @@
 
 function decorator(fn){
     let counter = 0;
-    fn();
     return function(){
+      fn();
       counter++;
       console.log(counter);
     }
