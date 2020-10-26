@@ -1,5 +1,4 @@
 
-
 function decorator(fn){
     let counter = 0;
     fn();
