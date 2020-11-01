@@ -41,16 +41,13 @@ let personData = {
         else{
         this.lastName = value;
         }
-    },
-
-    get getFullName(){
-     return `${this.firstName} ${this.lastName}`
     }
+
+    
 
  }
 
 
 
-personData.setFirstName = "Van"
-personData.setLastName = "Darkholme"
-console.log(personData.getFullName);
+personData.fullName = "vanDarkholme";
+console.log(personData.fullName);
